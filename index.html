@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <!-- RWD自適應網頁(自動調整網頁大小) -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
+    <!-- css -->
+    <link rel="stylesheet" href="css/style.css">
+    <!-- 中文字型 -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500&display=swap" rel="stylesheet">
+    <!-- icon -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script src="https://kit.fontawesome.com/68f861dba.js" crossorigin="anonymous"></script>
+
+    <title>貓科動物圖鑑</title>
+</head>
+
+<body style="background-color: rgb(178, 248, 210);">
+  <script type="text/javascript">
+    let show = ""
+    function show_favorite(){
+      if(show != "")
+        alert("我的最愛：\n" + show)
+    }
+
+    function my_favorite(str){
+      if(show.includes(str))
+        {   }
+      else
+        show += str + '\n'
+    }
+
+    function remove_favorite(str){
+
+      show = show.replace((str+'\n'),'')
+
+    }
+
+  </script>
+    <header>
+    <p id="anchorName_top"></p> <!-- 滾動到此 -->
+     <div class="container">
+      <!-- Nav -->
+      <nav class="navbar navbar-expand-lg bg-body-tertiary">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#">歡迎</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link" href="https://zh.wikipedia.org/zh-tw/%E7%8C%AB">貓貓百科</a>
+              </li>
+              <li class="nav-item">
+                <!-- <a class="nav-link" href='javascript:show_favorite()'>我的最愛</a> -->
+                <a class="nav-link" href='javascript:void(0)' OnClick='show_favorite()'>我的最愛</a>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  網站評分＆意見回饋
+                </a>
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" onclick="alert('謝謝您的喜歡！')">喜歡</a></li>
+                  <li><a class="dropdown-item" onclick="alert('不斷努力改進！')">不喜歡</a></li>
+                  <li><hr class="dropdown-divider"></li>
+                  <li><a class="dropdown-item" href="#anchorName2">聯絡我們</a></li>
+                  <a name="anchorName2"></a>
+                </ul>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link disabled">開發者模式</a>
+              </li>
+            </ul>
+            <!-- <form class="d-flex" role="search">
+              <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+              <button class="btn btn-outline-success" type="submit">Search</button> -->
+            </form>
+          </div>
+        </div>
+      </nav>
+     </div>
+    </header>
+
+    <!-- 第一個區塊banner -->
+    <!-- <section id="intro"> -->
+    <section id="intro" style="background: linear-gradient(45deg, rgb(128 127 67 / 90%), transparent) 80%, url(pictures/1.jpg) no-repeat center;background-size: cover;">
+        <div class="jumbotron">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12 col-md-6">
+                        <h1>歡迎來到<br>貓貓世界</h1>
+                        <br>
+                        <h2>認識可愛貓貓～</h2>
+                        <!-- 滾動到指定位置 -->
+                        <a href="#anchorName" class="btn rounded-2">點擊進入</a>
+                        <a name="anchorName"></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <p id="anchorName_author"></p> <!-- 滾動到此 -->
+    <!-- 第二個區塊 介紹 -->
+    <section id="second">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-8 offset-md-2 text-center">
+                    <h3>～ ～ ～ ～ 贊  助  罐  罐  做  功  德 ～ ～ ～ ～</h3>
+                    <div class="row">
+                      <div class="col-md-4 text-center">
+                        <img src="pictures/parrot.gif">
+                        <br>
+                        <div id="marquee">
+                          <span id="marquee_text">好人一生平安！</span>
+                        </div>
+                        <script type="text/javascript">
+                          function marquee(p, s) {
+                              var scrollWidth = (document.getElementById(p).offsetWidth);
+                              var textWidth = document.getElementById(s).offsetWidth;
+                              var i = scrollWidth;
+                              console.log(scrollWidth, textWidth);
+                              function change() {
+                                  i--;
+                                  if (i < -textWidth) {
+                                      i = scrollWidth;
+                                  }
+                                  document.getElementById(s).style.left = i + "px";
+                                  window.requestAnimationFrame(change);
+                              }
+                              window.requestAnimationFrame(change);
+                          }
+                        </script>
+                        <button id="donate">餵食</button>
+                        <script type="text/javascript">
+                          let button = document.getElementById("donate")
+                          button.onclick = function(){
+                            marquee("marquee", "marquee_text");
+                          }
+                        </script>
+                        
+                      </div>
+                      <div class="col-md-3 text-center">
+                        <ul class="bg_ring">
+                          <li><div><img src="pictures/2.jpg"></div></li>
+                          <li><h4>喵嗚</h4></li>
+                        </ul>
+                      </div>
+                      <div class="col-md-4  text-center">
+                        <h4>作者簡介</h4>
+                        <h5>一隻會喵喵叫的狗</h5>
+                        <h5>歡迎拍打餵食</h5>
+                      </div>  
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <p id="anchorName"></p> <!-- 滾動到此 -->
+    <!-- 第三個區塊 品種 -->
+    <section id="third">
+      <div class="container">
+          <div class="row">
+              <div class="col-md-12 text-center">
+                  <h3>＝ ＝ ＝ ＝ ＝ ＝ 點  擊  圖  片  查  看 ＝ ＝ ＝ ＝ ＝ ＝</h3>
+                  <br>
+                  <div class="row">
+                    <div class="col-md-4 text-left">
+                      <div class="outer">
+                        <a href="https://zh.wikipedia.org/zh-tw/%E7%BE%8E%E5%9B%BD%E7%9F%AD%E6%AF%9B%E7%8C%AB">
+                          <div class="upper">
+                            <img class="photosc" src="pictures/3.jpg">
+                          </div>
+                        </a>
+                        </div>
+                        <div class="lower">
+                          <p class="name">美國短毛貓</p>
+                          <h6>學名：American Shorthair</h6>
+                          <button class="favorite" href='javascript:void(0)' OnClick='my_favorite("美國短毛貓")'>
+                              <i class="fa fa-heart"> 加入最愛</i>
+                          </button>
+                          <button class="favorite" href='javascript:void(0)' OnClick='remove_favorite("美國短毛貓")'>
+                            <i class="far fa-thin fa-heart"> 移除最愛</i>
+                          </button>
+                        </div> 
+                      </div>
+
+                    <div class="col-md-4 text-left">
+                      <div class="outer">
+                        <a href="https://zh.wikipedia.org/zh-tw/%e5%b8%83%e5%81%b6%e8%b2%93">
+                          <div class="upper">
+                            <img class="photosc" src="pictures/4.jpg">
+                          </div>
+                        </a>
+                        </div>
+                        <div class="lower">
+                          <p class="name">布偶貓</p>
+                          <h6>學名：Ragdoll</h6>
+                          <button class="favorite" href='javascript:void(0)' OnClick='my_favorite("布偶貓")'>
+                            <i class="fa fa-heart"> 加入最愛</i>
+                          </button>
+                          <button class="favorite" href='javascript:void(0)' OnClick='remove_favorite("布偶貓")'>
+                            <i class="far fa-thin fa-heart"> 移除最愛</i>
+                          </button>
+                        </div>
+                      </div>
+
+                      <div class="col-md-4 text-left">
+                        <div class="outer">
+                          <a href="https://zh.wikipedia.org/zh-tw/%E8%97%AA%E8%B2%93">
+                            <div class="upper">
+                              <img class="photosc" src="pictures/5.jpg">
+                            </div>
+                          </a>
+                          </div>
+                          <div class="lower">
+                            <p class="name">藪貓</p>
+                            <h6>學名：Leptailurus serval</h6>
+                            <button class="favorite" href='javascript:void(0)' OnClick='my_favorite("藪貓")'>
+                              <i class="fa fa-heart"> 加入最愛</i>
+                            </button>
+                            <button class="favorite" href='javascript:void(0)' OnClick='remove_favorite("藪貓")'>
+                              <i class="far fa-thin fa-heart"> 移除最愛</i>
+                            </button>
+                          </div>
+                        </div>
+                    </div>
+                    <br><br>
+                    <div class="row">
+                      <div class="col-md-4 text-left">
+                        <div class="outer">
+                          <a href="https://zh.wikipedia.org/zh-tw/%E7%8B%AE">
+                            <div class="upper">
+                              <img class="photosc" src="pictures/6.jpg">
+                            </div>
+                          </a>
+                          </div>
+                          <div class="lower">
+                            <p class="name">獅子</p>
+                            <h6>學名：Panthera leo</h6>
+                            <button class="favorite" href='javascript:void(0)' OnClick='my_favorite("獅子")'>
+                              <i class="fa fa-heart"> 加入最愛</i>
+                            </button>
+                            <button class="favorite" href='javascript:void(0)' OnClick='remove_favorite("獅子")'>
+                              <i class="far fa-thin fa-heart"> 移除最愛</i>
+                            </button>
+                          </div>
+                        </div>
+
+                      <div class="col-md-4 text-left">
+                        <div class="outer">
+                          <a href="https://zh.wikipedia.org/zh-tw/%E8%99%8E">
+                            <div class="upper">
+                              <img class="photosc" src="pictures/7.jpg">
+                            </div>
+                          </a>
+                          </div>
+                          <div class="lower">
+                            <p class="name">老虎</p>
+                            <h6>學名：Panthera tigris</h6>
+                            <button class="favorite" href='javascript:void(0)' OnClick='my_favorite("老虎")'>
+                              <i class="fa fa-heart"> 加入最愛</i>
+                            </button>
+                            <button class="favorite" href='javascript:void(0)' OnClick='remove_favorite("老虎")'>
+                              <i class="far fa-thin fa-heart"> 移除最愛</i>
+                            </button>
+                          </div>
+                        </div>
+  
+                        <div class="col-md-4 text-left">
+                          <div class="outer">
+                            <a href="https://zh.wikipedia.org/zh-tw/%E9%BB%91%E8%B1%B9">
+                              <div class="upper">
+                                <img class="photosc" src="pictures/8.jpg">
+                              </div>
+                            </a>
+                            </div>
+                            <div class="lower">
+                              <p class="name">黑豹</p>
+                              <h6>學名：Panthera pardus fusca</h6>
+                              <button class="favorite" href='javascript:void(0)' OnClick='my_favorite("黑豹")'>
+                                <i class="fa fa-heart"> 加入最愛</i>
+                              </button>
+                              <button class="favorite" href='javascript:void(0)' OnClick='remove_favorite("黑豹")'>
+                                <i class="far fa-thin fa-heart"> 移除最愛</i>
+                              </button>
+                            </div>
+                          </div>
+                      </div>
+          </div>
+      </div>
+      </div>
+  </section>
+
+  <p id="anchorName_news"></p> <!-- 滾動到此 -->
+  <!-- 第四個區塊 email-->
+  <section id="email">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-8 offset-md-2 text-center">
+              <h3>～ ～ ～ ～ 獲 取 最 新 消 息 ～ ～ ～ ～</h3>  
+              <br>
+            </div>
+      </div>
+      <div class="row">
+            <div class="col-md-8 offset-md-2 text-left">
+                <h5>請輸入Email</h5>
+                <div class="input-group mb-3">
+                    <span class="input-group-text" id="inputGroup-sizing-default">-- ></span>
+                    <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default" placeholder="你的Email">
+                </div>
+                <a class="btn btn-warning btn-lg" href="mailto:head1234567574@gmail.com" role="button">提交</a>
+            </div>
+      </div>
+    </div>
+  </section>
+
+  <p id="anchorName2"></p> <!-- 滾動到此 -->
+  <!-- 第五個區域footer -->
+  <footer>
+    <div class="container">
+      <div class="row">
+        <div class="col-md-4">
+          <h4>動物星球頻道</h4>
+          <img src="pictures/logo.jpg" alt="" width="170">
+        </div>
+        <div class="col-md-4">
+          <h4>網站地圖</h4>
+        <ul>
+          <li>
+          <a href="index.html">首頁</a>
+          <br>
+          <a href="#anchorName">圖鑑</a>
+          <a name="anchorName"></a>
+          </li>
+        </ul>
+        <ul>
+          <a href="#anchorName_author">作者</a>
+          <a name="anchorName_author"></a>
+          <br>
+          <a href="#anchorName_news">最新消息</a>
+          <a name="anchorName_news"></a>
+          </li>
+        </ul>
+        </div>
+        <div class="col-md-4">
+          <h4>聯絡我們</h4>
+          <p>地址： 喵星--貓貓國<br>
+            電話： 07-7654321<br>
+            Email： <a href="mailto:head1234567574@gmail.com">head1234567574@gmail.com</a>
+          </p>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <a href="#anchorName_top">
+    <button id="fixed" >TOP</button></a>
+  <a name="anchorName_top"></a>
+</body>
+</html>
