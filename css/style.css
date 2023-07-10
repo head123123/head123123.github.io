@@ -1,13 +1,19 @@
 h1{
+	position:relative;
+	top: 100px;
+	left: 20px;
 	font-family: 'DFKai-sb', sans-serif;
 	color: #f3930c;
-	font-size: 40px;
+	font-size: 60px;
 }
 
 h2{
+	position:relative;
+	top: 150px;
+	left: 40px;
 	font-family: 'DFKai-sb', sans-serif;
 	color: #bc7006;
-	font-size: 20px;
+	font-size: 40px;
 }
 
 h3,h5{
@@ -27,6 +33,28 @@ h6{
 
 p,a,span,li,label{
 	font-family: 'Open Sans', sans-serif;
+}
+
+.top a{
+	position:relative;
+	top: 200px;
+	left: 70px;
+	text-align: center;
+	font-family: 'Open Sans', sans-serif;
+	font-size: 25px;
+}
+	
+#back{
+	background-color: #c3bfcc;
+    border:2px #948e94 dashed;
+	border-radius: 20%;
+    color: rgb(21, 0, 32);
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+	font-family: 'DFKai-sb', sans-serif;
+    font-size: 35px;
 }
 
 dialog{
@@ -129,7 +157,6 @@ dialog{
     display: inline-block;
     font-size: 17px;
 }
-
 
 img{
 	max-width:100%;
