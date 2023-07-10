@@ -26,6 +26,8 @@
     function show_favorite(){
       if(show != "")
         alert("我的最愛：\n" + show)
+      else
+        alert("尚未新增項目")
     }
 
     function my_favorite(str){
@@ -48,7 +50,7 @@
       <!-- Nav -->
       <nav class="navbar navbar-expand-lg bg-body-tertiary">
         <div class="container-fluid">
-          <a class="navbar-brand" href="#">歡迎</a>
+          <a>功能列：</a>
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
           </button>
@@ -90,19 +92,15 @@
     <!-- 第一個區塊banner -->
     <!-- <section id="intro"> -->
     <section id="intro" style="background: linear-gradient(45deg, rgb(128 127 67 / 90%), transparent) 80%, url(pictures/1.jpg) no-repeat center;background-size: cover;">
-        <div class="jumbotron">
-            <div class="container">
-                <div class="row">
-                    <div class="col-12 col-md-6">
-                        <h1>歡迎來到<br>貓貓世界</h1>
-                        <br>
-                        <h2>認識可愛貓貓～</h2>
-                        <!-- 滾動到指定位置 -->
-                        <a href="#anchorName" class="btn rounded-2">點擊進入</a>
-                        <a name="anchorName"></a>
-                    </div>
-                </div>
-            </div>
+      <div class="jumbotron">
+        <h1>歡迎光臨<br>&nbsp;&nbsp;貓貓世界</h1>
+          <br>
+          <h2>認識可愛貓貓～</h2>
+          <div class="top">
+            <!-- 滾動到指定位置 -->
+            <a href="#anchorName" class="btn rounded-2" style="width:170px;height:50px;">點擊進入</a>
+            <a name="anchorName"></a>
+          </div>
         </div>
     </section>
 
@@ -339,6 +337,8 @@
           <br>
           <a href="#anchorName">圖鑑</a>
           <a name="anchorName"></a>
+          <br>
+          <a href="index2.html">參考資料</a>
           </li>
         </ul>
         <ul>
@@ -348,6 +348,8 @@
           <a href="#anchorName_news">最新消息</a>
           <a name="anchorName_news"></a>
           </li>
+        </ul>
+        <ul>
         </ul>
         </div>
         <div class="col-md-4">
